@@ -1,0 +1,33 @@
+version: "3.2"
+services:
+
+  userdb:
+    container_name: 'userdb'
+    image: mysql:8.0
+    environment:
+      MYSQL_ROOT_USER: root
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: userdb
+    ports:
+      - 3308:3306
+    networks:
+      - teusnetwork
+
+  user:
+    # container_name: 'user'
+    image: user
+    depends_on:
+      - userdb
+    # ports:
+    #   - 5062:5062
+    expose:
+      - "5062"
+    networks:
+      - teusnetwork
+    scale: 3
+
+
+networks:
+  teusnetwork:
+    external:
+      name: teusnetwork

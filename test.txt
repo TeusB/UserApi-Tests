@@ -1,0 +1,8 @@
+dotnet new sln
+dotnet sln add user/user.csproj
+user.Tests -> dotnet new nunit - dotnet add reference ../user/user.csproj
+dotnet sln add ./user.Tests/user.Tests.csproj
+
+dotnet test
+
+Microsoft.AspNetCore.Mvc.Testing

@@ -1,0 +1,13 @@
+Microsoft.EntityFrameworkCore.Tools
+Microsoft.AspNetCore.Authentication.JwtBearer
+AutoMapper.Extensions.Microsoft.DependencyInjection
+AutoMapper
+Newtonsoft.Json
+
+RabbitMQ.Client
+Microsoft.EntityFrameworkCore
+Pomelo.EntityFrameworkCore.MySql
+Microsoft.EntityFrameworkCore.Design
+Moq
+NEST
+dotnet add package Elasticsearch.Net
